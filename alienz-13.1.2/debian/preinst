@@ -1,0 +1,7 @@
+#!/bin/bash
+
+apt-get purge gnome-keyring
+
+add-apt-repository "deb http://repository.spotify.com stable non-free"
+
+apt-get update

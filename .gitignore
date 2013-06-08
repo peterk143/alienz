@@ -1,0 +1,6 @@
+alienz_*.dsc
+alienz_*_amd64.changes
+alienz-*/debian/alienz/
+alienz-*/alienz.debhelper.log
+alienz-*/alienz.substvars
+alienz-*/files

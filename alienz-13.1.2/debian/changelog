@@ -1,0 +1,14 @@
+alienz (13.1.2) raring-test; urgency=low
+
+  * rm'd some files
+  * added .gitignore and preinst
+  * added spotify dep
+
+ -- Peter Kirkpatrick <peterk.143@gmail.com>  Sat, 08 Jun 2013 19:22:34 -0400
+
+alienz (13.1.0) raring-test; urgency=low
+
+  * Initial Release
+  * added a few deps
+
+ -- Peter Kirkpatrick <peterk.143@gmail.com>  Sat, 08 Jun 2013 16:32:07 -0400
