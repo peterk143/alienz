@@ -1,0 +1,12 @@
+Source: alienz
+Section: admin
+Priority: optional
+Maintainer: Peter Kirkpatrick <peterk.143@gmail.com>
+Build-Depends: cdbs, debhelper (>= 5.0.0)
+Standards-Version: 3.9.4
+
+Package: alienz
+Architecture: all
+Depends: openjdk-7-jdk, icedtea-7-plugin, dh-make, subversion, git, emacs24, weechat, wireshark, tshark, pigz, devscripts, cdbs
+Description: Configures my personal linux machines
+ Configures my personal linux machines

@@ -1,0 +1,10 @@
+Package: alienz
+Version: 13.1.0
+Architecture: all
+Maintainer: Peter Kirkpatrick <peterk.143@gmail.com>
+Installed-Size: 46
+Depends: openjdk-7-jdk, icedtea-7-plugin, dh-make, subversion, git, emacs24, weechat, wireshark, tshark, pigz, devscripts, cdbs
+Section: admin
+Priority: optional
+Description: Configures my personal linux machines
+ Configures my personal linux machines
