@@ -1,3 +1,10 @@
+alienz (13.1.3) raring-test; urgency=low
+
+  * updated README
+  * added chromium dep
+
+ -- Peter Kirkpatrick <peterk.143@gmail.com>  Sun, 09 Jun 2013 02:32:55 -0400
+
 alienz (13.1.2) raring-test; urgency=low
 
   * rm'd some files
