@@ -15,7 +15,14 @@ usage() {
 
    Usage: ${0} [-h | --help] version
 
+     -Options-
+
+       -l, --list-debs                 list all available (.)debs
+       -h, --help                      display this message    
+
+
          `bold Example`:
+              ${0} -l
               ${0} 13.1.3
               ${0} --help
 EOF
@@ -24,6 +31,9 @@ EOF
 if [ "${1}" == "-h" -o "${1}" == "--help" ]; then
     usage
     exit 1
+elif [ "${1}" == "-l" -o "${1}" == "--list-debs" ]; then
+    git ls-tree -r HEAD debs/ |cut -f2 |cut -f2 -d "/"
+    exit 0
 elif [ $# -eq 1 ]; then
     VER=${1}
     PNAME="alienz_${1}_all.deb"
