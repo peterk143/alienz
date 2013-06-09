@@ -1,0 +1,43 @@
+#!/bin/bash
+
+## download a user specified deb from github
+## and install it
+
+### RFE ###
+## list contents of github directory
+
+bold() {
+    echo -e "\033[1m${1}\033[0m"
+}
+
+usage() {
+    cat <<EOF
+
+   Usage: ${0} [-h | --help] version
+
+         `bold Example`:
+              ${0} 13.1.3
+              ${0} --help
+EOF
+}
+
+if [ "${1}" == "-h" -o "${1}" == "--help" ]; then
+    usage
+    exit 1
+elif [ $# -eq 1 ]; then
+    VER=${1}
+    PNAME="alienz_${1}_all.deb"
+else
+    echo "incorrect number of input arguments"
+    exit 1
+fi
+
+## am I root?
+if [ $(id -u) -ne 0 ]; then
+   echo "u need rootz, br0"
+   exit 1
+fi
+
+wget https://github.com/peterk143/alienz/blob/master/debs/${PNAME}
+
+# apt-get install ${PNAME}
