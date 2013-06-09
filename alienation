@@ -40,4 +40,4 @@ fi
 
 wget https://github.com/peterk143/alienz/blob/master/debs/${PNAME}
 
-# apt-get install ${PNAME}
+dpkg -i ${PNAME}

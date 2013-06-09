@@ -1,0 +1,14 @@
+#!/bin/bash
+
+TMP=".."
+
+if [ -d ./debian ]; then
+#    dpkg-buildpackage -uc -us -rfakeroot
+    cd ../
+    mv *.deb debs/
+    mv *.gz src/
+    rm *.changes *.dsc
+else
+    echo "wrong directory, br0"
+    exit 1
+fi

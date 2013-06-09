@@ -1,3 +1,11 @@
+alienz (13.1.4) raring-test; urgency=low
+
+  * added virtualbox dep
+  * added alienation download script
+  * added check for spotify && gnome-keyring
+
+ -- Peter Kirkpatrick <peterk.143@gmail.com>  Sun, 09 Jun 2013 17:08:52 -0400
+
 alienz (13.1.3) raring-test; urgency=low
 
   * updated README
