@@ -1,7 +1,14 @@
 #!/bin/bash
 
-apt-get purge gnome-keyring
+## check for gnome-keyring
+KEYRING=`dpkg --get-selections |grep gnome-keyring`
+if [ $? -eq 0 ]; then
+  apt-get purge gnome-keyring
+fi
 
-add-apt-repository "deb http://repository.spotify.com stable non-free"
-
-apt-get update
+## check for spotify
+SPOTIFY=`rgrep spotify /etc/apt/`
+if [ $? -ne 0 ]; then
+  add-apt-repository "deb http://repository.spotify.com stable non-free"
+  apt-get update
+fi
