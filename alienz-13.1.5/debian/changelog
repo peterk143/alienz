@@ -1,3 +1,10 @@
+alienz (13.1.5) raring-test; urgency=low
+
+  * rm'd comment from deploy
+  * mv'd helper scripts to bin/
+
+ -- Peter Kirkpatrick <peterk.143@gmail.com>  Sun, 09 Jun 2013 19:27:06 -0400
+
 alienz (13.1.4) raring-test; urgency=low
 
   * added virtualbox dep
