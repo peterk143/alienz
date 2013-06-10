@@ -26,21 +26,22 @@ EOF
 }
 
 ## RFE
-## 1. switch to case statements
-## 2. use git ls-remote instead of ls-tree
+## 0. use git ls-remote instead of ls-tree
 
-if [ "${1}" == "-h" -o "${1}" == "--help" ]; then
-    usage
-    exit 1
-elif [ "${1}" == "-l" -o "${1}" == "--list-debs" ]; then
-    git ls-tree -r HEAD debs/ |cut -f2 |cut -f2 -d "/"  ## RFE:: doesn't work for remotes
-    exit 0
-elif [ $# -eq 1 ]; then ## RFE:: use regex
-    VER=${1}
-    PNAME="alienz_${1}_all.deb"
+REGEX="[0-9]+\.[0-9]+\.[0-9]+"
+if [[ ${1} =~ ${REGEX} ]]; then
+  PNAME="alienz_${1}_all.deb"
 else
-    echo "incorrect number of input arguments"
-    exit 1
+    case "${1}" in 
+	-h|--help) 
+	    usage
+	    exit 1 ;;
+	-l|--list-debs)
+	    git ls-tree -r HEAD debs/ |cut -f2 |cut -f2 -d "/" ## RFE:: doesn't work for remotes
+	    exit 0 ;;
+	*) echo "improper arguments" 
+	    exit 1;;
+    esac
 fi
 
 ## am I root?

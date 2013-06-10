@@ -1,3 +1,10 @@
+alienz (13.1.8) raring-test; urgency=low
+
+  * added case && regex to alienation
+  * rm'd deb && src dirs (not needed)
+
+ -- Peter Kirkpatrick <pkirkpat@csee.wvu.edu>  Mon, 10 Jun 2013 17:52:40 -0400
+
 alienz (13.1.7) raring-test; urgency=low
 
   * added spotify pub key
