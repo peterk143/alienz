@@ -1,6 +1,7 @@
 #!/bin/bash
 
-TMP=".."
+## RFE
+## make this add comments for tags and commits
 
 if [ -d ./debian ]; then
     dpkg-buildpackage -uc -us -rfakeroot
