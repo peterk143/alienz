@@ -1,2 +1,2 @@
 loud/docs/* /usr/share/loud/docs/
-bin/* /bin/
+bin/* /usr/bin/

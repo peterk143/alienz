@@ -1,3 +1,11 @@
+alienz (13.1.7) raring-test; urgency=low
+
+  * added spotify pub key
+  * mv'd scripts to /usr/bin
+  * changed alienation apt-get to aptitude
+
+ -- Peter Kirkpatrick <pkirkpat@csee.wvu.edu>  Mon, 10 Jun 2013 12:02:00 -0400
+
 alienz (13.1.6) raring-test; urgency=low
 
   * added -y to preinst remove of gnome-keyring

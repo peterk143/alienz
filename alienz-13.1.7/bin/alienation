@@ -33,7 +33,7 @@ if [ "${1}" == "-h" -o "${1}" == "--help" ]; then
     usage
     exit 1
 elif [ "${1}" == "-l" -o "${1}" == "--list-debs" ]; then
-    git ls-tree -r HEAD debs/ |cut -f2 |cut -f2 -d "/"
+    git ls-tree -r HEAD debs/ |cut -f2 |cut -f2 -d "/"  ## RFE:: doesn't work for remotes
     exit 0
 elif [ $# -eq 1 ]; then ## RFE:: use regex
     VER=${1}
@@ -49,7 +49,7 @@ if [ $(id -u) -ne 0 ]; then
    exit 1
 fi
 
-apt-get update && apt-get -y dist-upgrade
+aptitude update && aptitude -y full-upgrade
 wget https://github.com/peterk143/alienz/blob/master/debs/${PNAME}
 
 dpkg -i ${PNAME}
