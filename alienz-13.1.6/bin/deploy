@@ -4,7 +4,7 @@ TMP=".."
 
 if [ -d ./debian ]; then
     dpkg-buildpackage -uc -us -rfakeroot
-    rm debian/alienz* debian/files
+    rm -rf debian/alienz* debian/files
     cd ../
     mv *.deb debs/
     mv *.gz src/

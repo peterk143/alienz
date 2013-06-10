@@ -3,7 +3,7 @@
 ## check for gnome-keyring
 KEYRING=`dpkg --get-selections |grep gnome-keyring`
 if [ $? -eq 0 ]; then
-  apt-get purge gnome-keyring
+  apt-get -y remove --purge gnome-keyring
 fi
 
 ## check for spotify

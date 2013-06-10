@@ -25,6 +25,10 @@ usage() {
 EOF
 }
 
+## RFE
+## 1. switch to case statements
+## 2. use git ls-remote instead of ls-tree
+
 if [ "${1}" == "-h" -o "${1}" == "--help" ]; then
     usage
     exit 1

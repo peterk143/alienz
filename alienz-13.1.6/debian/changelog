@@ -1,3 +1,11 @@
+alienz (13.1.6) raring-test; urgency=low
+
+  * added -y to preinst remove of gnome-keyring
+  * updated virtualbox in control file
+  * added -rf to deploy script
+
+ -- Peter Kirkpatrick <peterk.143@gmail.com>  Sun, 09 Jun 2013 21:19:11 -0400
+
 alienz (13.1.5) raring-test; urgency=low
 
   * rm'd comment from deploy
