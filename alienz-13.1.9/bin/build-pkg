@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -d ./debian ]; then
+    ## build package
+    dpkg-buildpackage -uc -us -rfakeroot
+
+    ## remove unnecessary files
+    rm -rf debian/alienz* debian/files
+    rm ../*.changes ../*.dsc
+    
+    ## deploy; should use deploy for localhost first
+    if [ -f /usr/bin/deploy ]; then
+	deploy
+    else
+	bin/deploy
+    fi
+else
+    echo "wrong directory, br0"
+fi

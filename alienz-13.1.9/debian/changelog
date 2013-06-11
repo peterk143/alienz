@@ -1,3 +1,9 @@
+alienz (13.1.9) raring-test; urgency=low
+
+  * split deploy into build-pkg and deploy
+
+ -- Peter Kirkpatrick <pkirkpat@csee.wvu.edu>  Tue, 11 Jun 2013 14:41:40 -0400
+
 alienz (13.1.8) raring-test; urgency=low
 
   * added case && regex to alienation
