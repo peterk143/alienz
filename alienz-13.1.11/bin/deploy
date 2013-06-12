@@ -1,0 +1,54 @@
+#!/bin/bash
+
+## outputs comments from debian/changelog
+getComments() {
+    TMP="`awk '
+/ --/ {exit};
+/^$/ {next};
+/  \*/ && foo != 1 {foo = 1; print; next};
+foo == 1 {print}' debian/changelog`"
+
+    COMMENT=$(echo "${TMP}" |tr -d '\n')
+
+    shopt -s extglob
+    COMMENT="${COMMENT##*( )}"
+
+    echo "${COMMENT}"
+    shopt -u extglob
+}
+
+## get the current version number
+## from debian/changelog
+getVersion() {
+    echo `head -n1 debian/changelog` |cut -f2 -d "(" |cut -f1 -d ")"
+}
+
+if [ -d ./debian ]; then
+    ## commit and tag
+    git add ../*
+    echo ""
+    git commit -m "$(getComments)"
+    git tag -a "v$(getVersion)" -m "$(getComments)"
+    echo ""
+    
+    ## are your tag and comments correct
+    git status
+    echo ""
+    echo -n "push changes? [y/N] "
+    read -n 1 response
+    echo ""
+    response=`echo $response |tr '[:upper:]' '[:lower:]'`
+
+    if [ "${response}" == "y" ]; then
+    	git push origin HEAD
+    	git push --tags
+    elif [ "${response}" == "" -o "${response}" == "n" ]; then
+    	echo "ain't doin' shit!"
+    else
+    	echo "incorrect input, dude"
+    	exit 1
+    fi
+else
+    echo "wrong directory, br0"
+    exit 1
+fi

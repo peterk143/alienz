@@ -1,3 +1,9 @@
+alienz (13.1.11) raring-test; urgency=low
+
+  * deploy parses version and comments from changelog
+
+ -- Peter Kirkpatrick <peterk.143@gmail.com>  Wed, 12 Jun 2013 00:50:22 -0400
+
 alienz (13.1.10) raring-test; urgency=low
 
   * rm'd previous src and debs
