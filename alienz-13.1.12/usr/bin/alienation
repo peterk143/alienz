@@ -51,6 +51,6 @@ if [ $(id -u) -ne 0 ]; then
 fi
 
 aptitude update && aptitude -y full-upgrade
-wget https://github.com/peterk143/alienz/blob/master/debs/${PNAME}
+wget https://github.com/peterk143/alienz/blob/master/${PNAME}
 
 dpkg -i ${PNAME}
