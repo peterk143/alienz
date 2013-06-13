@@ -1,3 +1,11 @@
+alienz (13.1.12) raring-test; urgency=low
+
+  * mv'd scripts to usr/bin
+  * added man page for alienation
+  * added tree dep
+
+ -- Peter Kirkpatrick <peterk.143@gmail.com>  Thu, 13 Jun 2013 00:27:14 -0400
+
 alienz (13.1.11) raring-test; urgency=low
 
   * deploy parses version and comments from changelog
