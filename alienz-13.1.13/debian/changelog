@@ -1,3 +1,10 @@
+alienz (13.1.13) raring-test; urgency=low
+
+  * added new man page
+  * updated alienation
+
+ -- Peter Kirkpatrick <peterk.143@gmail.com>  Fri, 14 Jun 2013 23:25:12 -0400
+
 alienz (13.1.12) raring-test; urgency=low
 
   * mv'd scripts to usr/bin
