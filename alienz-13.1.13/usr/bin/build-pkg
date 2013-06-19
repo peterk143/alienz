@@ -1,5 +1,8 @@
 #!/bin/bash
 
+## RFE
+##  add flag to not tag or build
+
 if [ -d ./debian ]; then
     ## build package
     dpkg-buildpackage -uc -us -rfakeroot

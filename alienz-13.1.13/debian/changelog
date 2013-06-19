@@ -1,7 +1,7 @@
 alienz (13.1.13) raring-test; urgency=low
 
   * added new man page
-  * updated alienation
+  * updated alienation using gitAPI
 
  -- Peter Kirkpatrick <peterk.143@gmail.com>  Fri, 14 Jun 2013 23:25:12 -0400
 
