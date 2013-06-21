@@ -7,6 +7,6 @@ Standards-Version: 3.9.4
 
 Package: alienz
 Architecture: all
-Depends: openjdk-7-jdk, icedtea-7-plugin, dh-make, subversion, git, emacs24, weechat, wireshark, tshark, pigz, devscripts, cdbs, spotify-client-qt, chromium-browser, virtualbox, john, htop, curl, hping3, screen, tree, ophcrack-cli, asciidoc, xmlto
+Depends: openjdk-7-jdk, icedtea-7-plugin, dh-make, subversion, git, emacs24, weechat, wireshark, tshark, pigz, devscripts, cdbs, spotify-client-qt, chromium-browser, virtualbox, john, htop, curl, hping3, screen, tree, ophcrack-cli, asciidoc, xmlto, emacs-goodies-el
 Description: Configures my personal linux machines
  Configures my personal linux machines
