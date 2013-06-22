@@ -1,0 +1,118 @@
+'\" t
+.\"     Title: alienation
+.\"    Author: [see the "AUTHORS" section]
+.\" Generator: DocBook XSL Stylesheets v1.76.1 <http://docbook.sf.net/>
+.\"      Date: 06/22/2013
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "ALIENATION" "1" "06/22/2013" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+alienation \- configures my personal linux machines
+.SH "SYNOPSIS"
+.sp
+\fBalienation\fR [\-\-help | \-\-list\-deb]
+.SH "DESCRIPTION"
+.sp
+This manual page briefly documents the \fBalienation\fR(1) command\&.
+.SH "OPTIONS"
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Show a summary of the command line optins and exit\&.
+.RE
+.PP
+\fB\-l, \-\-list\-deb\fR
+.RS 4
+List the available deb and exit\&.
+.RE
+.SH "COMMAND USAGE EXAMPLES"
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 1.\h'+01'\c
+.\}
+.el \{\
+.sp -1
+.IP "  1." 4.2
+.\}
+List the latest deb available on github and exit\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ alienation \-\-list\-deb
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 2.\h'+01'\c
+.\}
+.el \{\
+.sp -1
+.IP "  2." 4.2
+.\}
+Display the help message and exit\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ alienation \-\-help
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 3.\h'+01'\c
+.\}
+.el \{\
+.sp -1
+.IP "  3." 4.2
+.\}
+If no input is given, the latest deb will be downloaded from github and installed without question\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+$ alienation
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.SH "COPYING"
+.sp
+Free use of this software is granted under the terms of the GNU Gernal Public License (GPL) version 3\&.
+.SH "AUTHORS"
+.sp
+Peter Kirkpatrick \(co 2013

@@ -1,0 +1,48 @@
+#!/usr/bin/make -f
+# -- makefile --
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+
+# override_dh_auto_build:	
+# 	asciidoc -o alienation.1.xml \
+# 	-b docbook \
+# 	-d manpage alienation.1.txt
+
+# 	xmlto man my-manpage.1.xml \
+# 	-o debian/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# include /usr/share/cdbs/docs/class/asciidoc.mk
+
+# XMLTOFLAGS=-o debian/
+
+# pre-build::
+
+# common-build-indep:: debian/alienation.1.xml debian/alienation.1
+
+# clean::
+# rm -rf alienz
+# rm -rf debian/*.1
+# rm -rf ../alienz_*.dsc
+# rm -rf ../alienz-*/files
+# rm -rf usr/share/man/man1/*.xml
+# rm -rf ../alienz_*_amd64.changes
+# rm -rf ../alienz-*/alienz.substvars
+# rm -rf ../alienz-*/alienz.debhelper.log

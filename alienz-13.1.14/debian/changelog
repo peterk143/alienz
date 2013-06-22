@@ -1,3 +1,9 @@
+alienz (13.1.14) raring-test; urgency=low
+
+  * man pages, debian style
+
+ -- Peter Kirkpatrick <peterk.143@gmail.com>  Sat, 22 Jun 2013 14:49:03 -0400
+
 alienz (13.1.13) raring-test; urgency=low
 
   * added new man page
