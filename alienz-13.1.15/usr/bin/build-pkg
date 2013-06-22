@@ -4,11 +4,11 @@
 ##  add flag to not tag or build
 
 if [ -d ./debian ]; then
-    TARGET=$(pwd)
-    TMP=$(mktemp -d)
-    PNAME=${TARGET##*/}
 
     ## build package
+    if [ -f ../*.deb ]; then
+	git rm ../*.deb
+    fi
     dpkg-buildpackage -A -uc -us -rfakeroot
     rm -rf debian/alienz* debian/files ../*.changes
 

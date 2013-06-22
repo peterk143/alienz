@@ -1,3 +1,9 @@
+alienz (13.1.15) raring-test; urgency=low
+
+  * cleaned rules file
+
+ -- Peter Kirkpatrick <peterk.143@gmail.com>  Sat, 22 Jun 2013 19:08:26 -0400
+
 alienz (13.1.14) raring-test; urgency=low
 
   * man pages, debian style
