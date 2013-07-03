@@ -1,3 +1,11 @@
+alienz (13.1.16) raring-test; urgency=low
+
+  * added usr/lib/alienz/push.lib
+  * rm'd build-pkg
+  * added flag for building/tagging package
+
+ -- Peter Kirkpatrick <pkirkpat@csee.wvu.edu>  Wed, 03 Jul 2013 14:44:03 -0400
+
 alienz (13.1.15) raring-test; urgency=low
 
   * cleaned rules file

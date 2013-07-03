@@ -13,6 +13,7 @@ foo == 1 {print}' debian/changelog`"
     shopt -s extglob
     COMMENT="${COMMENT##*( )}"
 
+
     echo "${COMMENT}"
     shopt -u extglob
 }
@@ -23,32 +24,46 @@ getVersion() {
     echo `head -n1 debian/changelog` |cut -f2 -d "(" |cut -f1 -d ")"
 }
 
-if [ -d ./debian ]; then
-    ## commit and tag
-    git add ../*
-    echo ""
+## tag the build
+mkTag() {
     git commit -m "$(getComments)"
     git tag -a "v$(getVersion)" -m "$(getComments)"
-    echo ""
-    
-    ## are your tag and comments correct
-    git status
-    echo ""
-    echo -n "push changes? [y/N] "
-    read -n 1 response
-    echo ""
-    response=`echo $response |tr '[:upper:]' '[:lower:]'`
+}
 
-    if [ "${response}" == "y" ]; then
+## just commit
+mkCommit() {
+    git commit -m "$(getComments)"
+}
+
+push() {
+    if [ "${1}" == "y" ]; then
     	git push origin HEAD
-    	git push --tags
-    elif [ "${response}" == "" -o "${response}" == "n" ]; then
+    elif [ "${1}" == "" -o "${1}" == "n" ]; then
     	echo "ain't doin' shit!"
     else
     	echo "incorrect input, dude"
     	exit 1
     fi
-else
-    echo "wrong directory, br0"
-    exit 1
-fi
+}
+
+pushAll() {
+    if [ "${1}" == "y" ]; then
+    	git push origin HEAD
+    	git push --tags
+    elif [ "${1}" == "" -o "${1}" == "n" ]; then
+    	echo "ain't doin' shit!"
+    else
+    	echo "incorrect input, dude"
+    	exit 1
+    fi
+}
+
+tagCheck() {
+    ## are your tag and comments correct
+    git status
+    echo ""
+    echo -n "push changes? [y/N] "
+    read -n 1 RESPONSE
+    echo ""
+    echo $RESPONSE |tr '[:upper:]' '[:lower:]'
+}

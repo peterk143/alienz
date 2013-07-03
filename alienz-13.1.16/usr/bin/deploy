@@ -1,0 +1,61 @@
+#!/bin/bash
+
+bold() {
+    echo -e "\033[1m${1}\033[0m"
+}
+
+usage() {
+    cat <<EOF
+
+   Usage: ${0} [-b | --build] [-h | --help]
+
+     -Options-
+
+        -b, --build                      build/tag package before pushing to GitHub
+        -h, --help                       display this message and exit
+
+          `bold Example`:
+              ${0} -b
+              ${0} --help
+EOF
+}
+
+if [ -d ./debian ]; then
+    source /usr/lib/alienz/push.lib
+    case "${1}" in 
+	-b|--build)
+	    dpkg-buildpackage -A -us -uc -rfakeroot
+            ## commit and tag
+	    git add ../*
+	    echo ""
+	    mkTag
+	    echo ""
+	    
+            ## are your tag and comments correct
+	    git status
+	    echo ""
+	    echo -n "push changes? [y/N] "
+	    read -n 1 RESPONSE
+	    echo ""
+	    RESPONSE=$(echo $RESPONSE |tr '[:upper:]' '[:lower:]')
+
+	    pushAll "${RESPONSE}" ;;
+	-h|--help)
+	    usage
+	    exit 0 ;;
+	"") mkCommit 
+            ## are your comments correct
+	    git status
+	    echo ""
+	    echo -n "push changes? [y/N] "
+	    read -n 1 RESPONSE
+	    echo ""
+	    RESPONSE=$(echo $RESPONSE |tr '[:upper:]' '[:lower:]')
+
+	    push "${RESPONSE}" ;;
+	*) echo "invalid input, man" ;;
+    esac
+else
+    echo "wrong directory, br0"
+    exit 1
+fi

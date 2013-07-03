@@ -50,10 +50,10 @@ case "${1}" in
 	    exit 1
 	fi
 
- 	apt-get update && apt-get -y dist-upgrade
-	wget https://github.com/peterk143/alienz/blob/master/$(listDEB)
-        # dpkg -i alienz_*_all.deb ## isn't a debian format archive :/
+	wget https://p3t3rk.me/downloadz/$(listDEB)
+        dpkg -i alienz_*_all.deb ## isn't a debian format archive :/
+
 	exit 0 ;;
     *) echo "improper arguments" 
-	exit 1;;
+	exit 1 ;;
 esac
